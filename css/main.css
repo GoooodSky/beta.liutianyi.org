@@ -65,12 +65,13 @@ nav ul li a{
 	line-height: 25px;
 }
 
-button{
-	padding: 14px 28px;
-	font-size: 20px;
-	letter-spacing: 4px;
+button.main{
+	padding: 10px 20px;
+	font-size: 17px;
+	letter-spacing: 2px;
 	border-radius: 6px;
 	background: #333;
+	color: #fff;
 }
 
 #banner .inner .more{
@@ -314,6 +315,16 @@ header{
 	background-color: #444;
 }
 
+
+.back-to-top{
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	background-color: #333;
+	color: #fff;
+	border: 1px solid #888;
+	padding: 10px;	
+}
 
 
 
