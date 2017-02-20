@@ -41,7 +41,12 @@ nav ul li a{
 	display: inline-block;
 	height: 50px;
 	color: #fff;
+	padding: 0 5px;
 
+}
+
+nav ul li .active{
+	border-bottom: 3px solid #cfd0d0;
 }
 
 #banner .inner{
@@ -314,7 +319,6 @@ header{
 #sidebar ul a:hover{
 	background-color: #444;
 }
-
 
 .back-to-top{
 	position: fixed;
