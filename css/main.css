@@ -319,6 +319,9 @@ header{
 #sidebar ul a:hover{
 	background-color: #444;
 }
+#sidebar_trigger{
+	font-size: 18px;
+}
 
 .back-to-top{
 	position: fixed;
@@ -328,6 +331,10 @@ header{
 	color: #fff;
 	border: 1px solid #888;
 	padding: 10px;	
+}
+
+#clork{
+	background: rgba(f, f, f, 0.01);
 }
 
 
