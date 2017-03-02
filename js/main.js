@@ -6,6 +6,7 @@
 'use strict';
 
 var sidebar = $('#sidebar'),
+	sidebarOut = $('#sidebar .fa'),
 	mask = $('.mask'),
 	backButton = $('.back-to-top'),
 	sidebar_trigger = $('#sidebar_trigger');
@@ -41,6 +42,7 @@ $(window).trigger('scroll');
 
 sidebar_trigger.on('click', showSidebar)   // showSidebar后不能加()否则会默认执行
 mask.on('click', hideSidebar)
+sidebarOut.on('click', hideSidebar)
 backButton.on('click', backToTop)
 
 

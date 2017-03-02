@@ -12,7 +12,13 @@ function drawBackground(){
     ctx.beginPath();
     ctx.lineWidth = 10 * rem;
     ctx.arc( 0, 0, r - ctx.lineWidth / 2, 0, 2 * Math.PI, false);    
+    ctx.strokeStyle = "rgba(0,0,0,0.7)";
     ctx.stroke();//空心
+
+    ctx.beginPath();
+    ctx.arc( 0, 0, r - ctx.lineWidth / 2 - 5 * rem, 0, 2 * Math.PI, false);    
+    ctx.fillStyle = "rgba(255,255,255,0.7)";
+    ctx.fill();//实心背景
 
     var hourNumbers = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2];  //画12个数字
     ctx.font = 18 * rem + 'px Arial';
@@ -23,6 +29,7 @@ function drawBackground(){
     	var rad = 2 * Math.PI / 12 * i;
     	var x = Math.cos(rad) * (r - 30 * rem);
     	var y = Math.sin(rad) * (r - 30 * rem);
+        ctx.fillStyle = "#000";
         ctx.fillText(number, x, y);
     })
 
@@ -99,18 +106,17 @@ function drawDot() {
 
 
 function draw(){
-    ctx.clearRect(0, 0, width, height);
-    var now = new Date();
-    var hour = now.getHours();
-    var minute = now.getMinutes();
-    var second = now.getSeconds();
-    drawBackground();
-    drawHour(hour, minute);
-    drawMinute(minute);
-    drawSecond(second);
-    drawDot();
-    ctx.restore();
-  
+ctx.clearRect(0, 0, width, height);
+var now = new Date();
+var hour = now.getHours();
+var minute = now.getMinutes();
+var second = now.getSeconds();
+drawBackground();
+drawHour(hour, minute);
+drawMinute(minute);
+drawSecond(second);
+drawDot();
+ctx.restore();
 }
 
 draw();
