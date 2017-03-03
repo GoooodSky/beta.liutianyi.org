@@ -5,19 +5,14 @@
 }/*清除父级浮动*/
 
 }
-p{
-	font-size: 18px;
-	letter-spacing: 1px;
-}
 
-ul{
-	margin: 0;
-}
 nav{
 	background: transparent;
 	height: 50px;
 }
-
+/** {
+	font-family: "Microsoft YaHei";
+}*/
 #banner{
 	background: transparent;
 	height: 700px;
@@ -32,7 +27,8 @@ nav ul{
 nav ul li{
 	display: inline-block;
 	line-height: 50px;
-	margin-right: 20px;
+	margin-right: 15px;
+	font-size: 17px;
 }
 
 nav ul li a{
@@ -42,7 +38,7 @@ nav ul li a{
 	height: 50px;
 	color: #fff;
 	padding: 0 5px;
-
+	letter-spacing: 3px;
 }
 
 nav ul li .active{
@@ -54,33 +50,38 @@ nav ul li .active{
 	text-align: center;
 	margin: 0 auto;
 	position: relative;
-	top: 160px;
+	top: 140px;
 }
 
 
-#banner .inner h1{
+/*#banner .inner h1{
 	margin: 0;
 	color: #fff;
 	letter-spacing: 3px;
-}
+}*/
 #banner .inner p{
-	color: #fff;
-	font-size: 18px;
-	letter-spacing: 1px;
+	color: #d6d6d6;
+	font-size: 15px;
+	letter-spacing: 1.5px;
 	line-height: 25px;
+	margin-top: 40px;
 }
 
-button.main{
+#banner .inner p b{
+	font-size: 18px;
+}
+
+/*button.main{
 	padding: 10px 20px;
 	font-size: 17px;
 	letter-spacing: 2px;
 	border-radius: 6px;
 	background: #333;
 	color: #fff;
-}
+}*/
 
 #banner .inner .more{
-	margin-top: 150px;
+	margin-top: 90px;
 	color: #fff;
 }
 
@@ -89,7 +90,7 @@ button.main{
 	float: left;
 	padding: 10px;
 	padding-left: 30px;
-
+    margin-top: 6px;
 }
 
 .logo a{
@@ -274,9 +275,10 @@ header{
 	background:rgba(0, 0, 0, 0.4);
 }
 
-.fa{
-	margin-top: 10px;
+span .fa{
+	margin-top: 5px;
 	color: #fff;
+	font-size: 20px;
 }
 
 .mask{
@@ -297,14 +299,23 @@ header{
 	width: 300px;
 	background-color: #333;
 	color: #fff;
-	padding: 20px 0;
+	/*padding: 20px 0;*/
 	transition: right 0.5s;
 
+}
+
+#sidebar .fa{
+	/*margin-top: 5px;*/
+	margin-right: 20px;
+	float: right;
+	font-size: 17px;
+    line-height: 50px;
 }
 
 #sidebar ul{
 	list-style: none;
 	padding: 0;
+	margin-top: 50px;
 
 }
 
@@ -319,8 +330,10 @@ header{
 #sidebar ul a:hover{
 	background-color: #444;
 }
-#sidebar_trigger{
-	font-size: 18px;
+#sidebar_trigger .fa{
+	font-size: 17px;
+	color: #fff;
+	line-height: 50px;
 }
 
 .back-to-top{
@@ -332,12 +345,6 @@ header{
 	border: 1px solid #888;
 	padding: 10px;	
 }
-
-#clork{
-	background: rgba(f, f, f, 0.01);
-}
-
-
 
 
 
