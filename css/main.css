@@ -4,7 +4,6 @@
 	clear: both;
 }/*清除父级浮动*/
 
-}
 
 nav{
 	background: transparent;
@@ -50,7 +49,7 @@ nav ul li .active{
 	text-align: center;
 	margin: 0 auto;
 	position: relative;
-	top: 140px;
+	top: 90px;
 }
 
 
@@ -60,7 +59,7 @@ nav ul li .active{
 	letter-spacing: 3px;
 }*/
 #banner .inner p{
-	color: #d6d6d6;
+	color: #fff;
 	font-size: 15px;
 	letter-spacing: 1.5px;
 	line-height: 25px;
@@ -102,7 +101,7 @@ nav ul li .active{
 }
 
 .green-section{
-	background: #089DB0;
+	background: #252F34;
 	color: #fff;
 	text-align: center;
 	padding: 100px 0;
@@ -110,7 +109,7 @@ nav ul li .active{
 }
 
 .green-section .hr{
-	background: #078494;
+	background: #394246;
 	margin: 20px auto;
 	width: 60%;
 	height: 2px;
@@ -129,7 +128,7 @@ nav ul li .active{
 	display: inline-block;
 	width: 80px;
 	height: 80px;
-	background: #0D6F7C;
+	background: #394246;
 	transform: rotate(45deg);
 	margin: 20px;
 }
@@ -264,15 +263,15 @@ footer{
 }
 
 .main-wrapper{
-	background: #444 url(../img/banner.jpg);
+	background: #444 url(../img/bannner01.jpg);
 	background-attachment: fixed;
-	background-size: contain;
-	background-position: center center;
+	background-size: cover;
+	/*background-position: center center;*/
 	overflow: hidden;
 }
 
 header{
-	background:rgba(0, 0, 0, 0.4);
+	background:rgba(0, 0, 0, 0.05);
 }
 
 span .fa{
@@ -320,7 +319,7 @@ span .fa{
 }
 
 #sidebar ul a{
-	color: #fff;
+	color: #ccc;
 	padding: 10px 30px;
 	display: inline-block;
 	text-decoration: none;
@@ -328,10 +327,13 @@ span .fa{
 }
 
 #sidebar ul a:hover{
+	color: #fff;
 	background-color: #444;
+	border-left: 4px solid #cfd0d0;
 }
+
 #sidebar_trigger .fa{
-	font-size: 17px;
+	font-size: 20px;
 	color: #fff;
 	line-height: 50px;
 }
@@ -345,7 +347,5 @@ span .fa{
 	border: 1px solid #888;
 	padding: 10px;	
 }
-
-
 
 
