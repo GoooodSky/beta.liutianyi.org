@@ -9,28 +9,53 @@ nav{
 	background: transparent;
 	height: 50px;
 }
-/** {
-	font-family: "Microsoft YaHei";
-}*/
+
+.logo{
+	position: relative;
+	float: left;
+	padding: 10px;
+	padding-left: 30px;
+    margin-top: 6px;
+}
+
+.logo a{
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-decoration: none;
+	color: #fff;
+}
 #banner{
 	background: transparent;
 	height: 700px;
 }
 
+.sidebar_trigger {
+	background-color: rgba(0,0,0,0.35);
+    /*background-color: rgba(255,255,255,0.1);*/
+    padding: 0 15px;
+    margin-right: 10px;
+    /*text-align: center;*/
+
+}
+
+
 nav ul{
-	list-style: none;
-	margin: 0;
-	float: right;
+/*	list-style: none;*/
+	margin: 0 ;
+    position: fixed;
+    right:0;
 }
 
 nav ul li{
 	display: inline-block;
 	line-height: 50px;
-	margin-right: 15px;
-	font-size: 17px;
+	margin-right: 25px;
+	font-size: 25px;
+	color: #fff;
 }
 
-nav ul li a{
+/*nav ul li a{
 	line-height: 50px;
 	text-decoration: none;
 	display: inline-block;
@@ -38,10 +63,23 @@ nav ul li a{
 	color: #fff;
 	padding: 0 5px;
 	letter-spacing: 3px;
+}*/
+
+/*nav ul li .active{
+	border-bottom: 3px solid #cfd0d0;
+}*/
+#clork{
+position: relative;
 }
 
-nav ul li .active{
-	border-bottom: 3px solid #cfd0d0;
+#date{
+position: absolute;
+display: none;
+}
+
+
+.more{
+	display: block;
 }
 
 #banner .inner{
@@ -84,21 +122,7 @@ nav ul li .active{
 	color: #fff;
 }
 
-.logo{
 
-	float: left;
-	padding: 10px;
-	padding-left: 30px;
-    margin-top: 6px;
-}
-
-.logo a{
-	font-size: 20px;
-	font-weight: 700;
-	letter-spacing: 1px;
-	text-decoration: none;
-	color: #fff;
-}
 
 .green-section{
 	background: #252F34;
@@ -274,11 +298,12 @@ header{
 	background:rgba(0, 0, 0, 0.05);
 }
 
-span .fa{
+
+/*span .fa{
 	margin-top: 5px;
 	color: #fff;
 	font-size: 20px;
-}
+}*/
 
 .mask{
 	display: none;
@@ -303,13 +328,13 @@ span .fa{
 
 }
 
-#sidebar .fa{
-	/*margin-top: 5px;*/
+/*#sidebar .fa{
+	margin-top: 5px;
 	margin-right: 20px;
 	float: right;
 	font-size: 17px;
     line-height: 50px;
-}
+}*/
 
 #sidebar ul{
 	list-style: none;
@@ -326,17 +351,12 @@ span .fa{
 	width: 100%;
 }
 
-#sidebar ul a:hover{
+#sidebar ul a:hover,.active{
 	color: #fff;
 	background-color: #444;
 	border-left: 4px solid #cfd0d0;
 }
 
-#sidebar_trigger .fa{
-	font-size: 20px;
-	color: #fff;
-	line-height: 50px;
-}
 
 .back-to-top{
 	position: fixed;
