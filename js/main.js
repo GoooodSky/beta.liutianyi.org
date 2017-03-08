@@ -26,8 +26,6 @@ function backToTop() {
 
 }
 
-
-
 $(window).on('scroll', function () {
 	if ($(window).scrollTop() > $(window).height())
 		backButton.fadeIn();
@@ -44,9 +42,6 @@ sidebar_trigger.on('click', showSidebar)   // showSidebar后不能加()否则会
 mask.on('click', hideSidebar)
 sidebarOut.on('click', hideSidebar)
 backButton.on('click', backToTop)
-
-
-
 
 
 
