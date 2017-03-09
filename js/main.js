@@ -14,7 +14,10 @@ var sidebar = $('#sidebar'),
 	sidebarOut = $('#sidebar .fa'),
 	mask = $('.mask'),
 	backButton = $('.back-to-top'),
-	sidebar_trigger = $('#sidebar_trigger');
+	sidebar_trigger = $('#sidebar_trigger'),
+	more = $('.more')
+
+	;
 
 function showSidebar() {
 	mask.fadeIn();
@@ -28,6 +31,11 @@ function hideSidebar() {
 
 function backToTop() {
 	$('html , body').animate({scrollTop : 0}, 800)
+
+}
+
+function goToNext() {
+	$('html , body').animate({scrollTop : 800}, 800)
 
 }
 
@@ -90,6 +98,7 @@ sidebar_trigger.on('click', showSidebar)   // showSidebar后不能加()否则会
 mask.on('click', hideSidebar)
 sidebarOut.on('click', hideSidebar)
 backButton.on('click', backToTop)
+more.on('click', goToNext)
 clork.on('mouseover', clorkchange)
 date.on('mouseout', datechange)
 
