@@ -39,7 +39,7 @@ function goToNext() {
 
 }
 
-function clorkchange() {
+function clorkChange() {
 
 	clork.hide();
 	date.show();
@@ -48,7 +48,7 @@ function clorkchange() {
 }
 
 
-function datechange() {
+function dateChange() {
 	clork.show();
 	date.hide();
 	// date.css('position', 'relative');
@@ -58,33 +58,31 @@ function datechange() {
 
 
 $(window).on('scroll', function () {
-	if ($(window).scrollTop() >= $(window).height())
-		{
-			backButton.fadeIn();
-			sidebar_trigger.addClass('sidebar_trigger');
+	if ($(window).scrollTop() > $(window).height()){
+		// backButton.fadeIn();
+		sidebar_trigger.addClass('sidebar_trigger');
 
-		     currTop = $(window).scrollTop();
+		currTop = $(window).scrollTop();
 
-				 if(currTop > prevTop)  //判断是往上还是往下滚动
-					 {
-					  sidebar_trigger.fadeOut();
+		 if(currTop > prevTop){  //判断是往上还是往下滚动
+			  sidebar_trigger.fadeOut(1000);
+	  		  backButton.fadeOut(1000);
 
-					 } 
+		 } 
 
-				 else
-					 {
-					 sidebar_trigger.fadeIn();
-					 }
+		 else{
+			 sidebar_trigger.fadeIn(200);
+			 backButton.fadeIn(200);
+		 }
 
-				 setTimeout(function(){prevTop = currTop},0);
+		setTimeout(function(){prevTop = currTop},0);
 
-		}
+	}
 
-	else
-	   {
-		backButton.fadeOut();
+	else{
+		backButton.fadeOut(3000);
 		sidebar_trigger.removeClass('sidebar_trigger');
-	   }
+	}
 
 
 })
@@ -96,11 +94,12 @@ $(window).trigger('scroll');
 
 sidebar_trigger.on('click', showSidebar)   // showSidebar后不能加()否则会默认执行
 mask.on('click', hideSidebar)
+sidebar.on('click', hideSidebar)
 sidebarOut.on('click', hideSidebar)
 backButton.on('click', backToTop)
 more.on('click', goToNext)
-clork.on('mouseover', clorkchange)
-date.on('mouseout', datechange)
+clork.on('mouseover', clorkChange)
+date.on('mouseout', dateChange)
 
 
 
