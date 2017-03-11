@@ -1,4 +1,4 @@
-;$(function () {
+$(function () {
 
 
 
@@ -80,7 +80,7 @@ $(window).on('scroll', function () {
 	}
 
 	else{
-		backButton.fadeOut(3000);
+		backButton.fadeOut(1000);
 		sidebar_trigger.removeClass('sidebar_trigger');
 	}
 

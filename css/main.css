@@ -363,6 +363,10 @@ header{
 	color: #fff;
 	background-color: #444;
 	border-left: 4px solid #cfd0d0;
+    /*transition: color 0.3s;*/
+    /*transition: border-left 0.3s;*/
+
+
 }
 
 .back-to-top{
