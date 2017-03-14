@@ -65,7 +65,7 @@ $(window).on('scroll', function () {
 		currTop = $(window).scrollTop();
 
 		 if(currTop > prevTop){  //判断是往上还是往下滚动
-			  sidebar_trigger.fadeOut(1000);
+			  // sidebar_trigger.fadeOut(1000);
 	  		  backButton.fadeOut(1000);
 
 		 } 
@@ -98,8 +98,8 @@ sidebar.on('click', hideSidebar)
 sidebarOut.on('click', hideSidebar)
 backButton.on('click', backToTop)
 more.on('click', goToNext)
-clork.on('mouseover', clorkChange)
-date.on('mouseout', dateChange)
+clork.on('mouseover click', clorkChange)
+date.on('mouseout click', dateChange)
 
 
 

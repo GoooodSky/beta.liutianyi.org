@@ -70,13 +70,19 @@ nav ul li{
 	border-bottom: 3px solid #cfd0d0;
 }*/
 
+.canvas{
+	margin: 0 auto;	
+}
+
 #clork{
 position: relative;
+margin: 0 auto;
 }/*时钟*/
 
 #date{
 position: absolute;
 display: none;
+margin: 0 auto;
 }
 
 .more{
@@ -172,9 +178,9 @@ display: none;
 .text-section{
 	width: 55%;
 	position: relative;
-	top: 68px;
-	left: 50px;
-	margin-top: 0;
+	/*top: 68px;*/
+	left: 5%;
+	margin-top: 2%;
 }
 
 .text-section > *{
@@ -232,13 +238,13 @@ display: none;
 }
 
 .card{
-	float: left;
-	width: 50%;
+	/*float: left;*/
+	/*width: 50%;*/
 	min-height: 300px;
 	padding: 50px;
-	-webkit-box-sizing: border-box;
+/*	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
+	        box-sizing: border-box;*/
     /*border: 1px solid white;*/
 }
 
@@ -271,7 +277,7 @@ footer{
 
 .share-group{
 	display: block;
-	width: 1080px;
+	/*width: 1080px;*/
 	margin: 0 auto;
 	padding: 50px;
 }
@@ -374,6 +380,7 @@ header{
 	bottom: 30px;
 	right: 30px;
 	background-color: #333;
+	opacity: 0.8;
 	color: #fff;
 	border: 1px solid #888;
 	padding: 10px;	
