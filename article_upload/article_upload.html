@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>文章上传</title>
+</head>
+
+<body>
+
+<h1>添加文章</h1>
+<label>请输入标题：</label>
+<input type="text" id="articleTitle" /><br>
+
+
+<label>请输入文章内容：</label>
+<textarea id="articleContent"></textarea><br>
+
+
+<button id="upload">保存</button>
+<p id="uploadResult"></p>
+
+<script src="../js/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function(){ 
+
+	$("#upload").click(function(){ 
+		$.ajax({ 
+		    type: "POST", 	
+			url: "serverjson.php",
+			data: {
+				title: $("#articleTitle").val(), 
+				content: $("#articleContent").val()
+			},
+			dataType: "json",
+			success: function(data){
+				if (data.success) { 
+					$("#uploadResult").html(data.msg);
+				} else {
+					$("#uploadResult").html("出现错误：" + data.msg);
+				}  
+			},
+			error: function(jqXHR){     
+			   alert("发生错误：" + jqXHR.status);  
+			},     
+		});
+	});
+});
+</script>
+</body>
+</html>
