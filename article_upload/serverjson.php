@@ -62,7 +62,7 @@ function create(){
 		|| !isset($_POST["content"]) || empty($_POST["content"])) 
 
 	{
-		echo '{"success":false,"msg":"参数错误，员工信息填写不全"}';
+		echo '{"success":false,"msg":"参数错误，信息填写不全"}';
 		return;
 	}
 	// TODO: 获取POST表单数据并保存到数据库
@@ -84,7 +84,7 @@ function create(){
 
 	
 	// 提示保存成功
-	echo '{"success":true,"msg":"员工：' . $_POST["title"] . ' 信息保存成功！"}';
+	echo '{"success":true , "msg" : "文章：《 ' . $_POST["title"] . ' 》保存成功！"}';
 }
 
 ?>
