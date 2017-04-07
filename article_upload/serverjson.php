@@ -66,16 +66,17 @@ function create(){
 		return;
 	}
 	// TODO: 获取POST表单数据并保存到数据库
-	$db = "articles";
+	$db = "uchihaty";
+    $title= md5($_POST["title"]);
 
 	mysql_select_db($db);
 
-	mysql_query("SET $_POST[title] UTF8");
-	mysql_query("SET $_POST[content] UTF8");
+	// mysql_query("SET $_POST[title] UTF8");
+	// mysql_query("SET $_POST[content] UTF8");
 
 
 
-	$sql =  "insert into articles_list (title,content) " ."values('$_POST[title]','$_POST[content]') ";
+	$sql =  "insert into articles_list (title,content) " ."values('$title','$_POST[content]') ";
 
 	mysql_query($sql);
 	// $sql = "insert into article set title='$_POST["title"]',content='$_POST["content"]';"
