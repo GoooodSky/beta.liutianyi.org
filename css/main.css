@@ -72,6 +72,7 @@ nav ul li{
 
 .canvas{
 	margin: 0 auto;	
+	max-width: 200px;
 }
 
 #clork{
@@ -91,7 +92,7 @@ margin: 0 auto;
 }
 
 #banner .inner{
-	max-width: 300px;
+	/*max-width: 200px;*/
 	text-align: center;
 	margin: 0 auto;
 	position: relative;
