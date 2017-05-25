@@ -1,0 +1,27 @@
+body{
+	background-color: #ccc;
+}
+
+.wrapper{
+	width: 30%;
+	margin: 0 auto;
+	padding: 20px;
+	margin-top: 10%;
+	background-color: #fff;
+	border-radius: 10px;
+
+}
+
+p{
+	color: red;
+	margin-top: 5px;
+}
+
+.border-color{
+	border-color: red;
+}
+
+.title{
+	text-align: center;
+	margin: 20px;
+}
