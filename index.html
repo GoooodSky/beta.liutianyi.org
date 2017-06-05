@@ -3,34 +3,43 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name=viewport content=" width = device-width " initial-scale="1" ">
 	<title>从你的全世界路过</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href=" http://materializecss.com/css/ghpages-materialize.css">
+
 </head>
 
 <body>
 <div class="main-wrapper">
 	<header><!-- 页头开始 -->
 		<nav>
-			<div class="logo"><a href="">Uchihaty</a></div>
-			<ul>
-				<!-- <li><a href="#" class="active">首页</a></li>
-				<li><a href="#">文章</a></li>
-				<li><a href="#">资源</a></li>
-				<li><a href="#">简历</a></li> -->
-				<li id="sidebar_trigger"><i class="fa fa-bars" aria-hidden="true"></i></li>
-			</ul>
+		    <div class="nav-wrapper">
+				<a href="#" class="brand-logo">Uchihaty</a> 
+			    <a href="#" id="sidebar_trigger" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="#" class="active">首页</a></li>
+					<li><a href="#">文章</a></li>
+					<li><a href="#">资源</a></li>
+					<li><a href="#">简历</a></li>
+					<!-- <li id="sidebar_trigger"><i class="fa fa-bars" aria-hidden="true"></i></li> -->
+				</ul>
+			</div>
 		</nav>
-
-
-
-		<div id="banner">
+        
+		<div id="main_banner">
 			<div class="inner">
 				<div class="canvas">
-					<canvas id="clork" height="200px" width="200px"></canvas>
-					<canvas id="date" height="200px" width="200px"></canvas>
+					<canvas id="clork" height="100px" width="100px"></canvas>
+					<canvas id="date" height="100px" width="100px"></canvas>
 				</div>
 					
 				<p>
@@ -49,7 +58,6 @@
 			</div>
 		</div>
 	</header><!-- 页头结束 -->
-
 
 	<div class="content"><!-- 内容开始 -->
 		<section class="green-section">
@@ -174,16 +182,16 @@
 		<li><a href="#"><i class="fa fa-id-card-o" aria-hidden="true"></i>简历</a></li>
 		<li><a href="https://github.com/uchihaty"><i class="fa fa-github" aria-hidden="true"></i>Github</a></li>
 	</ul>
+</div><!-- 侧边栏结束 -->
 
-	<!-- <div class="sidebarOut">
-		<i class="fa fa-sign-out" aria-hidden="true"></i>
-	</div> -->
-</div>
-
-<button class="back-to-top">返回顶部</button>
+<a id="back_top" class="btn-floating btn-large waves-effect waves-light red hoverable">
+<i class="material-icons">navigation</i>
+</a>
 
 <script src="js/jquery-3.1.1.js"></script>
 <script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/materialize.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/date.js"></script>
 <script src="js/clork.js"></script>

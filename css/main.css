@@ -4,71 +4,103 @@
 	clear: both;
 }/*清除父级浮动*/
 
-
+/*导航栏部分开始*/
 nav{
-	background: transparent;
+	position: fixed;
 	height: 50px;
 }
 
-.logo{
-	position: relative;
-	float: left;
-	padding: 10px;
-	padding-left: 30px;
-    margin-top: 6px;
+nav ul{
+	margin: 0 ;
+    position: fixed;
+    right:0;
+
 }
 
+nav ul li{
+	display: inline-block;
+	line-height: 64px;
+	margin-right: 25px;
+	font-size: 25px;
+	color: #fff;
+}
+ 
+.nav-wrapper{
+	padding-left: 10px;
+}
+ 
 .logo a{
 	font-size: 20px;
-	font-weight: 700;
 	letter-spacing: 1px;
 	text-decoration: none;
 	color: #fff;
 }
-#banner{
-	background: transparent;
-	height: 700px;
-}
-
-.sidebar_trigger{
-	background-color: rgba(0,0,0,0.35);
-    padding: 0 15px;
-    margin-right: 10px;
-}/*滚动距离超过屏幕高时添加此类*/
 
 #sidebar_trigger:hover{
 	cursor: pointer;
 	color: #ccc;
 }
 
-nav ul{
-/*	list-style: none;*/
-	margin: 0 ;
-    position: fixed;
-    right:0;
-}
+/*导航栏部分结束*/
 
-nav ul li{
-	display: inline-block;
-	line-height: 50px;
-	margin-right: 25px;
-	font-size: 25px;
+
+/*侧边栏部分开始*/
+#sidebar{
+	position: fixed;
+	top: 0;
+	left: -300px;
+	bottom: 0;
+	width: 300px;
+	background-color: #333;
 	color: #fff;
+	/*padding: 20px 0;*/
+	transition: left 0.5s;
+	cursor:w-resize	;
+
 }
 
-/*nav ul li a{
-	line-height: 50px;
+#sidebar ul{
+	list-style: none;
+	padding: 0;
+	margin-top: 50px;
+
+}
+
+#sidebar ul i{
+	font-size: 20px;
+	margin-right: 15px;
+	width: 20px;
+}
+
+#sidebar ul a{
+	font-size: 13px;
+	color: #ccc;
+	padding: 10px 15px;
+	display: inline-block;
 	text-decoration: none;
-	display: inline-block;
-	height: 50px;
-	color: #fff;
-	padding: 0 5px;
-	letter-spacing: 3px;
-}*/
+	width: 100%;
+	border-left: 4px solid transparent;
+}
 
-/*nav ul li .active{
-	border-bottom: 3px solid #cfd0d0;
-}*/
+#sidebar ul a:hover,.active{
+	/*color: #fff;
+	background-color: #444;
+	border-left: 4px solid #cfd0d0;*/
+    /*transition: color 0.3s;*/
+    /*transition: border-left 0.3s;*/
+}
+/*侧边栏部分结束*/
+
+
+#main_banner{
+	background: #444 url(../img/bannner01.jpg);
+	background-attachment: fixed;
+	background-size: contain;
+	overflow: hidden;
+    width: 100%;
+	height: 9/16 * width;
+
+}
 
 .canvas{
 	margin: 0 auto;	
@@ -91,42 +123,27 @@ margin: 0 auto;
 	cursor:s-resize;
 }
 
-#banner .inner{
-	/*max-width: 200px;*/
+#main_banner .inner{
+ 	position: relative;
 	text-align: center;
 	margin: 0 auto;
-	position: relative;
-	top: 90px;
+	top: 200px;
 }
 
-/*#banner .inner h1{
-	margin: 0;
-	color: #fff;
-	letter-spacing: 3px;
-}*/
-
-#banner .inner p{
+#main_banner .inner p{
 	color: #fff;
 	font-size: 15px;
 	letter-spacing: 1.5px;
 	line-height: 25px;
 	margin-top: 40px;
+	opacity: 0.8;
 }
 
-#banner .inner p b{
+#main_banner .inner p b{
 	font-size: 18px;
 }
 
-/*button.main{
-	padding: 10px 20px;
-	font-size: 17px;
-	letter-spacing: 2px;
-	border-radius: 6px;
-	background: #333;
-	color: #fff;
-}*/
-
-#banner .inner .more{
+#main_banner .inner .more{
 	margin-top: 90px;
 	color: #fff;
 }
@@ -292,13 +309,6 @@ footer{
 	padding-bottom: 20px;
 }
 
-.main-wrapper{
-	background: #444 url(../img/bannner01.jpg);
-	background-attachment: fixed;
-	background-size: cover;
-	/*background-position: center center;*/
-	overflow: hidden;
-}
 
 header{
 	background:rgba(0, 0, 0, 0.05);
@@ -318,73 +328,13 @@ header{
 	left: 0;
 	right: 0;
 	background: rgba(0, 0, 0, 0.3);
-	cursor:e-resize	;
+	cursor:w-resize	;
 }
 
-#sidebar{
+#back_top{
 	position: fixed;
-	top: 0;
-	right: -300px;
-	bottom: 0;
-	width: 300px;
-	background-color: #333;
-	color: #fff;
-	/*padding: 20px 0;*/
-	transition: right 0.5s;
-	cursor:e-resize	;
-
-}
-
-/*#sidebar .fa{
-	margin-top: 5px;
-	margin-right: 20px;
-	float: right;
-	font-size: 17px;
-    line-height: 50px;
-}*/
-
-#sidebar ul{
-	list-style: none;
-	padding: 0;
-	margin-top: 50px;
-
-}
-
-#sidebar ul i{
-	font-size: 20px;
-	margin-right: 15px;
-	width: 20px;
-}
-
-#sidebar ul a{
-	font-size: 13px;
-	color: #ccc;
-	padding: 10px 15px;
-	display: inline-block;
-	text-decoration: none;
-	width: 100%;
-	border-left: 4px solid transparent;
-}
-
-#sidebar ul a:hover,.active{
-	color: #fff;
-	background-color: #444;
-	border-left: 4px solid #cfd0d0;
-    /*transition: color 0.3s;*/
-    /*transition: border-left 0.3s;*/
-
-
-}
-
-.back-to-top{
-	position: fixed;
-	bottom: 30px;
-	right: 30px;
-	background-color: #333;
-	opacity: 0.8;
-	color: #fff;
-	border: 1px solid #888;
-	padding: 10px;	
+	bottom: 20px;
+	right: 20px;
 }
 
 
