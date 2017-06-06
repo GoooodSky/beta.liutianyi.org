@@ -13,6 +13,11 @@ var sidebar = $('#sidebar'),
     nav = $('nav')
 	;
 
+	
+$(".button-collapse").sideNav();
+$('.carousel.carousel-slider').carousel({fullWidth: true});
+$('.slider').slider();
+
 function showSidebar() {
 	mask.fadeIn();
 	sidebar.css({
@@ -43,7 +48,6 @@ function clorkChange() {
 function dateChange() {
 	clork.show();
 	date.hide();
-	// date.css('position', 'relative');
 }
 
 $(window).on('scroll', function () {

@@ -83,7 +83,7 @@ function drawMinute(minute){
 function drawSecond(second){
    ctx.save();
     ctx.beginPath();
-    ctx.fillStyle = "#c14543";
+    ctx.fillStyle = "#ee6e73";
     var rad = 2 * Math.PI / 60 * second;
     ctx.rotate(rad);
     ctx.moveTo(-2 * rem, 20 * rem);
