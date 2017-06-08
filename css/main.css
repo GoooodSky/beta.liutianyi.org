@@ -1,78 +1,20 @@
-.clearfix:after{
-	content: '';
-	display: block;
-	clear: both;
-}/*清除父级浮动*/
+header, main, footer {
+      padding-left: 300px;
+    }
 
-
-nav{
-	background: transparent;
-	height: 50px;
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
 }
-
-.logo{
-	position: relative;
-	float: left;
-	padding: 10px;
-	padding-left: 30px;
-    margin-top: 6px;
-}
-
-.logo a{
-	font-size: 20px;
-	font-weight: 700;
-	letter-spacing: 1px;
-	text-decoration: none;
-	color: #fff;
-}
-#banner{
-	background: transparent;
-	height: 700px;
-}
-
-.sidebar_trigger{
-	background-color: rgba(0,0,0,0.35);
-    padding: 0 15px;
-    margin-right: 10px;
-}/*滚动距离超过屏幕高时添加此类*/
-
-#sidebar_trigger:hover{
-	cursor: pointer;
-	color: #ccc;
-}
-
-nav ul{
-/*	list-style: none;*/
-	margin: 0 ;
-    position: fixed;
-    right:0;
-}
-
-nav ul li{
-	display: inline-block;
-	line-height: 50px;
-	margin-right: 25px;
-	font-size: 25px;
-	color: #fff;
-}
-
-/*nav ul li a{
-	line-height: 50px;
-	text-decoration: none;
-	display: inline-block;
-	height: 50px;
-	color: #fff;
-	padding: 0 5px;
-	letter-spacing: 3px;
-}*/
-
-/*nav ul li .active{
-	border-bottom: 3px solid #cfd0d0;
-}*/
-
-.canvas{
-	margin: 0 auto;	
-	max-width: 200px;
+          
+#main_banner{
+background: #444 url(../img/bannner01.jpg);
+background-attachment: fixed;
+background-size: cover;
+overflow: hidden;
+width: 100%;
+height: 9/16 * width;
 }
 
 #clork{
@@ -86,305 +28,54 @@ display: none;
 margin: 0 auto;
 }
 
-.more{
-	display: block;
-	cursor:s-resize;
-}
-
-#banner .inner{
-	/*max-width: 200px;*/
+.side-nav-content{
+ 	position: relative;
 	text-align: center;
-	margin: 0 auto;
-	position: relative;
-	top: 90px;
+	top: 30px;
 }
 
-/*#banner .inner h1{
-	margin: 0;
-	color: #fff;
-	letter-spacing: 3px;
-}*/
-
-#banner .inner p{
-	color: #fff;
-	font-size: 15px;
+.side-nav-content p{
+	text-align: center;
+	font-size: 13px;
 	letter-spacing: 1.5px;
 	line-height: 25px;
-	margin-top: 40px;
+	margin-top: 10px;
 }
 
-#banner .inner p b{
-	font-size: 18px;
-}
-
-/*button.main{
-	padding: 10px 20px;
-	font-size: 17px;
-	letter-spacing: 2px;
-	border-radius: 6px;
-	background: #333;
-	color: #fff;
-}*/
-
-#banner .inner .more{
-	margin-top: 90px;
-	color: #fff;
-}
-
-.green-section{
-	background: #252F34;
-	color: #fff;
-	text-align: center;
-	padding: 100px 0;
-
-}
-
-.green-section .hr{
-	background: #394246;
-	margin: 20px auto;
-	width: 60%;
-	height: 2px;
-
-}
-.wrapper{
-	max-width: 1080px;
-	margin: 0 auto;
-}
-
-.icon-group{
-	margin-top: 60px;
-}
-
-.green-section .icon-group .icon{
-	display: inline-block;
-	width: 80px;
-	height: 80px;
-	background: #394246;
-	transform: rotate(45deg);
-	margin: 20px;
-}
-
-.gray-section{
-	background: #252F34;
-	color: #fff;
-}
-.gray-section .img-section{
-	width: 45%;
-}
-
-.img-section img{
-	width: 100%;
-}
-
-.text-section{
-	width: 55%;
-	position: relative;
-	/*top: 68px;*/
-	left: 5%;
-	margin-top: 2%;
-}
-
-.text-section > *{
-	max-width: 90%;
-	margin-left: 0;
-}
-
-
-.article-preview > div{
-	float: left;
-	font-size: 0;
-}
-
-.article-preview:after{
-	content: '';
-	display: block;
-	clear: both;
-}
-
-.text-section h2{
-	font-size: 22px;
-	letter-spacing: 1px;
-}
-
-.text-section p{
-	font-size: 14px;
-	letter-spacing: 1px;
-}
-
-.text-section .sub-heading{
-	margin-top: 0;
+.side-nav-content p b{
 	font-size: 16px;
 }
 
-.article-preview:nth-child(odd){
-	background-color: rgba(255,255,255,0.09);
+.side-nav-content li a{
+	letter-spacing: 5px;
+	font-size: 15px;
+	/*margin-right: 55px;*/
 }
 
-.purple-section{
-	padding: 80px;
-	background-color: #3f3965;
-	color: #fff;
-	margin-top: 0;
+.side-nav-content li a i{
+	position: absolute;
+	left:60px;
 }
 
-.purple-section .heading-wrapper{
+
+.side-nav-hr{
+	width: 80%;
+}
+#back_top{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+
+.article{
+	text-align: center;
+	padding: 30px;
+}
+
+.article hr{
+	width: 70%;
+	background-color: #000;
+}
+.more-article{
 	text-align: center;
 }
-
-.purple-section .hr{
-	margin: 20px auto;
-	height: 2px;
-	background-color: #373259;
-	width: 60%;
-}
-
-.card{
-	/*float: left;*/
-	/*width: 50%;*/
-	/*min-height: 300px;*/
-	padding: 70px;
-/*	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;*/
-    /*border: 1px solid white;*/
-}
-
-.card:first-child{
-	background:rgba(0,0,0,0.04);
-}
-
-.card:nth-child(2){
-	background:rgba(0,0,0,0.08);
-}
-.card:nth-child(3){
-	background:rgba(0,0,0,0.12);
-}
-.card:nth-child(4){
-	background:rgba(0,0,0,0.16);
-}
-.card:nth-child(5){
-	background:rgba(0,0,0,0.20);
-}
-.card:nth-child(6){
-	background:rgba(0,0,0,0.24);
-}
-
-footer{
-	background: #333;
-	color: #fff;
-	min-height: 200px;
-	text-align: center;
-}
-
-.share-group{
-	display: block;
-	/*width: 1080px;*/
-	margin: 0 auto;
-	padding: 50px;
-}
-
-.share-group li{
-	display: inline-block;
-	padding: 10px;
-}
-
-.copy{
-	padding-bottom: 20px;
-}
-
-.main-wrapper{
-	background: #444 url(../img/bannner01.jpg);
-	background-attachment: fixed;
-	background-size: cover;
-	/*background-position: center center;*/
-	overflow: hidden;
-}
-
-header{
-	background:rgba(0, 0, 0, 0.05);
-}
-
-/*span .fa{
-	margin-top: 5px;
-	color: #fff;
-	font-size: 20px;
-}*/
-
-.mask{
-	display: none;
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: rgba(0, 0, 0, 0.3);
-	cursor:e-resize	;
-}
-
-#sidebar{
-	position: fixed;
-	top: 0;
-	right: -300px;
-	bottom: 0;
-	width: 300px;
-	background-color: #333;
-	color: #fff;
-	/*padding: 20px 0;*/
-	transition: right 0.5s;
-	cursor:e-resize	;
-
-}
-
-/*#sidebar .fa{
-	margin-top: 5px;
-	margin-right: 20px;
-	float: right;
-	font-size: 17px;
-    line-height: 50px;
-}*/
-
-#sidebar ul{
-	list-style: none;
-	padding: 0;
-	margin-top: 50px;
-
-}
-
-#sidebar ul i{
-	font-size: 20px;
-	margin-right: 15px;
-	width: 20px;
-}
-
-#sidebar ul a{
-	font-size: 13px;
-	color: #ccc;
-	padding: 10px 15px;
-	display: inline-block;
-	text-decoration: none;
-	width: 100%;
-	border-left: 4px solid transparent;
-}
-
-#sidebar ul a:hover,.active{
-	color: #fff;
-	background-color: #444;
-	border-left: 4px solid #cfd0d0;
-    /*transition: color 0.3s;*/
-    /*transition: border-left 0.3s;*/
-
-
-}
-
-.back-to-top{
-	position: fixed;
-	bottom: 30px;
-	right: 30px;
-	background-color: #333;
-	opacity: 0.8;
-	color: #fff;
-	border: 1px solid #888;
-	padding: 10px;	
-}
-
-
