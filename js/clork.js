@@ -101,10 +101,6 @@ function drawDot() {
     ctx.fill();
 }
 
-
-
-
-
 function draw(){
 ctx.clearRect(0, 0, width, height);
 var now = new Date();

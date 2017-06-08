@@ -9,13 +9,12 @@ header, main, footer {
 }
           
 #main_banner{
-	background: #444 url(../img/bannner01.jpg);
-	background-attachment: fixed;
-	background-size: cover;
-	overflow: hidden;
-    width: 100%;
-	height: 9/16 * width;
-
+background: #444 url(../img/bannner01.jpg);
+background-attachment: fixed;
+background-size: cover;
+overflow: hidden;
+width: 100%;
+height: 9/16 * width;
 }
 
 #clork{
@@ -48,13 +47,14 @@ margin: 0 auto;
 }
 
 .side-nav-content li a{
-	letter-spacing: 8px;
+	letter-spacing: 5px;
 	font-size: 15px;
+	/*margin-right: 55px;*/
 }
 
 .side-nav-content li a i{
-	/*margin-left: -50px;*/
-	margin-right: 0;
+	position: absolute;
+	left:60px;
 }
 
 
@@ -69,11 +69,13 @@ margin: 0 auto;
 
 .article{
 	text-align: center;
+	padding: 30px;
 }
 
 .article hr{
 	width: 70%;
-	/*height: 1px;*/
 	background-color: #000;
 }
-
+.more-article{
+	text-align: center;
+}
