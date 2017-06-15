@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name=viewport content=" width = device-width" initial-scale="1" >
-	<title>我希望有个如你一般的人</title>
+	<title>Someone Like You</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/materialize.css">
@@ -44,152 +44,170 @@
 	<header><!-- 页头开始 -->
 		<nav>
 		    <div class="nav-wrapper">
-				<a href="#" class="brand-logo center">Someone like you</a> 
+				<a href="#" class="brand-logo center">Someone Like You</a> 
 				<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li><a href="#" class="active">首页</a></li>
-					<li><a href="#">文章</a></li>
-					<li><a href="#">资源</a></li>
-					<li><a href="#">简历</a></li>
-				</ul>
 			</div>
 		</nav>
 	</header><!-- 页头结束 -->
 
 	<main>
-		<div class="slider">
+		<div id="slides" class="slider"><!-- 首页幻灯片 -->
 		  <ul class="slides">
 		    <li>
-		      <img src="../img/bannner01.jpg"> <!-- random image -->
+		      <img src="../img/slide01.jpg"> <!-- random image -->
 		      <div class="caption center-align">
-		        <h3>This is our big Tagline!</h3>
-		        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+		        <h3>温暖</h3>
+		        <h5 class="light grey-text text-lighten-3">我希望有个如你一般的人</h5>
 		      </div>
 		    </li>
 		    <li>
-		      <img src="../img/banner.jpeg"> <!-- random image -->
+		      <img src="../img/slide02.jpg"> <!-- random image -->
 		      <div class="caption left-align">
-		        <h3>Left Aligned Caption</h3>
-		        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+		        <h3>阅读</h3>
+		        <h5 class="light grey-text text-lighten-3">站在巨人的肩膀上</h5>
 		      </div>
 		    </li>
 		    <li>
-		      <img src="../img/banner.jpg"> <!-- random image -->
+		      <img src="../img/slide03.jpg"> <!-- random image -->
 		      <div class="caption right-align">
-		        <h3>Right Aligned Caption</h3>
-		        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+		        <h3>阳光</h3>
+		        <h5 class="light grey-text text-lighten-3">愿你被世界温柔以待</h5>
 		      </div>
 		    </li>
 		    <li>
-		      <img src="../img/bannner02.jpg"> <!-- random image -->
-		      <div class="caption center-align">
-		        <h3>This is our big Tagline!</h3>
-		        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+		      <img src="../img/slide04.jpg"> <!-- random image -->
+		      <div class="caption left-align">
+		        <h3>科技</h3>
+		        <h5 class="light grey-text text-lighten-3">科学技术是第一生产力</h5>
 		      </div>
 		    </li>
 		  </ul>
 		</div>
-		<div class="row"><!-- 文章列表开始 -->
+
+		<div id="article-list" class="row"><!-- 文章列表开始 -->
 			<div class="article">
-				<h3>随笔</h3>
+				<h3>热门文章</h3>
 				<hr>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, labore eum magni debitis nisi qui, at eligendi asperiores, quasi quidem ea nemo excepturi deleniti vel repellendus neque consequuntur, unde exercitationem.
+					技术、情感、随笔
 				</p>
 			</div>
-			<div class="card sticky-action small col l4 m6 s12">
-			  <div class="card-image">
-			    <img class="activator" src="../img/bannner01.jpg">
-			  </div>
-			  <div class="card-action">
-			    <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-			    <p><a href="#">阅读全文</a></p>
-			  </div>
-
-			  <div class="card-reveal">
-			    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-			    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-			  </div>
+			<div class="row">
+				<div class="col s12 m6 l4">
+				  <div class="card samll white">
+				    <div class="card-content black-text">
+				      <span class="card-title light-blue-text">Card Title</span>
+				      <p>I am a very simple card. I am good at containing small bits of information.
+				      I am convenient because I require little markup to use effectively.</p>
+				    </div>
+				    <div class="card-action">
+				      <a href="#">This is a link</a>
+				    </div>
+				  </div>
+				</div>
+				<div class="col s12 m6 l4">
+				  <div class="card samll white">
+				    <div class="card-content black-text">
+				      <span class="card-title light-blue-text">Card Title</span>
+				      <p>I am a very simple card. I am good at containing small bits of information.
+				      I am convenient because I require little markup to use effectively.</p>
+				    </div>
+				    <div class="card-action">
+				      <a href="#">This is a link</a>
+				    </div>
+				  </div>
+				</div>
+				<div class="col s12 m6 l4">
+				  <div class="card samll white">
+				    <div class="card-content black-text">
+				      <span class="card-title light-blue-text">Card Title</span>
+				      <p>I am a very simple card. I am good at containing small bits of information.
+				      I am convenient because I require little markup to use effectively.</p>
+				    </div>
+				    <div class="card-action">
+				      <a href="#">This is a link</a>
+				    </div>
+				  </div>
+				</div>
+				<div class="col s12 m6 l4">
+				  <div class="card samll white">
+				    <div class="card-content black-text">
+				      <span class="card-title light-blue-text">Card Title</span>
+				      <p>I am a very simple card. I am good at containing small bits of information.
+				      I am convenient because I require little markup to use effectively.</p>
+				    </div>
+				    <div class="card-action">
+				      <a href="#">This is a link</a>
+				    </div>
+				  </div>
+				</div>
+				<div class="col s12 m6 l4">
+				  <div class="card samll white">
+				    <div class="card-content black-text">
+				      <span class="card-title light-blue-text">Card Title</span>
+				      <p>I am a very simple card. I am good at containing small bits of information.
+				      I am convenient because I require little markup to use effectively.</p>
+				    </div>
+				    <div class="card-action">
+				      <a href="#">This is a link</a>
+				    </div>
+				  </div>
+				</div>
+				<div class="col s12 m6 l4">
+				  <div class="card samll white">
+				    <div class="card-content black-text">
+				      <span class="card-title light-blue-text">Card Title</span>
+				      <p>I am a very simple card. I am good at containing small bits of information.
+				      I am convenient because I require little markup to use effectively.</p>
+				    </div>
+				    <div class="card-action">
+				      <a href="#">This is a link</a>
+				    </div>
+				  </div>
+				</div>
 			</div>
 
-			<div class="card sticky-action small col l4 m6 s12">
-			  <div class="card-image">
-			    <img class="activator" src="../img/banner.jpeg">
-			  </div>
-			  <div class="card-action">
-			    <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-			    <p><a href="#">阅读全文</a></p>
-			  </div>
-			  <div class="card-reveal">
-			    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-			    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-			  </div>
+			<div class="more-things"><!-- 更多文章按钮 -->
+				<a href="#article-list" title="" class="btn more-things">更多文章</a>
+			</div>
+		</div><!-- 文章列表结束 -->	
+
+		<div id="files-list">
+			<div class="download">
+				<h3>热门资源</h3>
+				<hr>
+				<p>
+					不定期更新各种热门资源
+				</p>
+			</div>
+			<div class="collection">
+			  <a href="#!" class="collection-item">20170618 hosts文件  
+				  <span class="new badge" data-badge-caption="次下载">
+				  4
+				  </span>
+				</a>
+			  <a href="#!" class="collection-item">Your Name.2016.HDrip.1080P AAC x264.mp4
+				  <span class="new badge" data-badge-caption="次下载">
+				  3
+				  </span>
+			  </a>
+			  <a href="#!" class="collection-item">你的名字。.mkv</a>
+			  <a href="#!" class="collection-item">American.Genius.S01E01.Jobs.vs.Gates.720p.HDTV.x264-DHD</a>
 			</div>
 
-			<div class="card sticky-action small col l4 m6 s12">
-			  <div class="card-image">
-			    <img class="activator" src="../img/banner.jpg">
-			  </div>
-			  <div class="card-action">
-			    <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-			    <p><a href="#">阅读全文</a></p>
-			  </div>
-			  <div class="card-reveal">
-			    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-			    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-			  </div>
+			<div class="more-things">
+				<a href="" title="" class="btn more-things">更多资源</a>
 			</div>
-			<div class="card sticky-action small col l4 m6 s12">
-			  <div class="card-image">
-			    <img class="activator" src="../img/banner.jpg">
-			  </div>
-			  <div class="card-action">
-			    <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-			    <p><a href="#">阅读全文</a></p>
-			  </div>
-			  <div class="card-reveal">
-			    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-			    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-			  </div>
-			</div>
-			<div class="card sticky-action small col l4 m6 s12">
-			  <div class="card-image">
-			    <img class="activator" src="../img/banner.jpg">
-			  </div>
-			  <div class="card-action">
-			    <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-			    <p><a href="#">阅读全文</a></p>
-			  </div>
-			  <div class="card-reveal">
-			    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-			    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-			  </div>
-			</div>
-			<div class="card sticky-action small col l4 m6 s12">
-			  <div class="card-image">
-			    <img class="activator" src="../img/banner.jpg">
-			  </div>
-			  <div class="card-action">
-			    <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-			    <p><a href="#">阅读全文</a></p>
-			  </div>
-			  <div class="card-reveal">
-			    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-			    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-			  </div>
-			</div>
-		</div><!-- 文章列表结束 -->
-		<div class="more-article"><!-- 更多文章按钮 -->
-			<a href="" title="" class="btn">更多文章</a>
 		</div>
+
 	</main>
 
 	<footer class="page-footer"><!-- 页脚开始 -->
 	  <div class="container">
 	    <div class="row">
 	      <div class="col l5 s12">
-	        <h5 class="white-text">Footer Content</h5>
-	        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+	        <h5 class="white-text">WELCOME</h5>
+	        <p class="grey-text text-lighten-4">你是第1024位来这儿的胖友，超过了99%的人类！真腻害~</p>
 	      </div>
 	      <div class="col l4 s12">
 	        <h5 class="white-text">友情链接</h5>

@@ -57,7 +57,6 @@ margin: 0 auto;
 	left:60px;
 }
 
-
 .side-nav-hr{
 	width: 80%;
 }
@@ -67,15 +66,19 @@ margin: 0 auto;
 	right: 20px;
 }
 
-.article{
+.article , .download{
 	text-align: center;
 	padding: 30px;
 }
 
-.article hr{
+.article hr , .download hr{
 	width: 70%;
 	background-color: #000;
 }
-.more-article{
+.more-things{
 	text-align: center;
+	margin-bottom: 10px;
+}
+.download{
+	padding: 0px;
 }
