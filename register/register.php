@@ -1,5 +1,5 @@
 <?php
-require_once("../conn.php");
+require_once("../conn/conn.php");
 
 header("Content-Type: text/plain;charset=utf-8"); 
 

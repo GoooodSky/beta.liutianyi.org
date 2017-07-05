@@ -1,6 +1,6 @@
 <?php
 // include 'conn.php';
-require_once("conn.php");
+require_once("../conn/conn.php");
 
 //设置页面内容是html编码格式是utf-8
 header("Content-Type: text/plain;charset=utf-8"); 
