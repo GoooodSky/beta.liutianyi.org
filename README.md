@@ -1,5 +1,5 @@
-***Beta version 0.7.X.***
+***Beta version***
 
-This project is the code of www.Uchihaty.com — My personal website page.
+This project is for liutianyi.org — My personal website page.
 
-Just use for study.
+Please just use for study.
