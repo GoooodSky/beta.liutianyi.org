@@ -13,9 +13,7 @@
  */
 
 ?>
-
 		</div><!-- #content -->
-
 		<footer id="colophon" class="site-footer" role="contentinfo" >
 			<div class="wrap">
 				<?php
@@ -39,9 +37,23 @@
 				?>
 			</div><!-- .wrap -->
 		</footer><!-- #colophon -->
+		<div id="back_top"><img src="http://liutianyi.org/img/backtotop.png" width="100%" height="100%" /></div>
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
-
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript">
+			function backToTop() {
+				$('html , body').animate({scrollTop : 0}, 800)
+			}
+			$(window).on('scroll', function () {
+				if ($(window).scrollTop() > $(window).height())
+				$('#back_top').fadeIn();
+				else
+				$('#back_top').fadeOut();
+			})
+			$(window).trigger('scroll');
+			$('#back_top').on('click', backToTop)
+		</script>
 </body>
 </html>

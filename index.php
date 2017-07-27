@@ -1,20 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+require_once("./conn/conn.php");
+date_default_timezone_set("Asia/Shanghai");
 
+	$db = "visitor";
+	mysql_select_db($db);
+	$ip = $_SERVER["REMOTE_ADDR"];
+	$date = date("Y.m.j");
+	$time = date("H:i:s");
+	$request = $_SERVER["HTTP_HOST"].$_SERVER["PHP_SELF"]."/".$_SERVER["QUERY_STRING"];
+	mysql_query("insert into history (ip,date,time,request) values ('$ip','$date','$time','$request')");
+?><!-- 保存访问信息，可复用 -->
+<?php
+	$sql = "select * from user where ip = '$ip'";
+	$query = mysql_query($sql);
+	$result = mysql_fetch_array($query);
+	if($result == true){
+        $query = mysql_query("select id from user where ip = '$ip'");
+        $num = mysql_fetch_array($query);
+    }
+	else{
+		mysql_query("insert into user (ip,date,time) values ('$ip','$date','$time')");
+		$query = mysql_query("select max(id) from user");
+		$num = mysql_fetch_array($query);
+	}
+?>
+<!DOCTYPE html><html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name=viewport content=" width = device-width" initial-scale="1" >
 	<title>Someone Like You</title>
-	<link rel="shortcut icon" type="image/x-icon"  href="img/title.png">
+	<link rel="shortcut icon" type="image/x-icon"  href="img/logo.ico">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-
 <body>
-
     <ul id="slide-out" class="side-nav fixed"><!-- 侧边栏开始 -->
 	    <div class="side-nav-content">
 		    <div class="canvas">
@@ -42,14 +64,14 @@
 	<header><!-- 页头开始 -->
 		<nav>
 		    <div class="nav-wrapper">
-				<a href="#" class="brand-logo center">Someone Like You</a>
+				<a href="#" class="brand-logo center">Someone&nbspLike&nbspYou</a>
 				<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 			</div>
 		</nav>
 	</header><!-- 页头结束 -->
 
 	<main>
-		<div id="slides" class="slider"><!-- 首页幻灯片 -->
+		<div id="slides" class="slider"><!-- 首页幻灯片开始 -->
 		  <ul class="slides">
 		    <li>
 		      <img src="img/slide01.jpg"> <!-- random image -->
@@ -80,95 +102,42 @@
 		      </div>
 		    </li>
 		  </ul>
-		</div>
+		</div><!-- 首页幻灯片结束 -->
 
-		<div id="article-list" class="row"><!-- 文章列表开始 -->
-			<div class="article">
-				<h3>热门文章</h3>
+		<div id="article-list"><!-- 文章区域开始 -->
+			<div class="article"><!-- 文章列表抬头开始 -->
+				<h3>最新文章</h3>
 				<hr>
 				<p>
 					技术、情感、随笔
 				</p>
-			</div>
-			<div class="row">
-				<div class="col s12 m6 l4">
-				  <div class="card samll white">
-				    <div class="card-content black-text">
-				      <span class="card-title light-blue-text">Card Title</span>
-				      <p>I am a very simple card. I am good at containing small bits of information.
-				      I am convenient because I require little markup to use effectively.</p>
-				    </div>
-				    <div class="card-action">
-				      <a href="#">This is a link</a>
-				    </div>
-				  </div>
-				</div>
-				<div class="col s12 m6 l4">
-				  <div class="card samll white">
-				    <div class="card-content black-text">
-				      <span class="card-title light-blue-text">Card Title</span>
-				      <p>I am a very simple card. I am good at containing small bits of information.
-				      I am convenient because I require little markup to use effectively.</p>
-				    </div>
-				    <div class="card-action">
-				      <a href="#">This is a link</a>
-				    </div>
-				  </div>
-				</div>
-				<div class="col s12 m6 l4">
-				  <div class="card samll white">
-				    <div class="card-content black-text">
-				      <span class="card-title light-blue-text">Card Title</span>
-				      <p>I am a very simple card. I am good at containing small bits of information.
-				      I am convenient because I require little markup to use effectively.</p>
-				    </div>
-				    <div class="card-action">
-				      <a href="#">This is a link</a>
-				    </div>
-				  </div>
-				</div>
-				<div class="col s12 m6 l4">
-				  <div class="card samll white">
-				    <div class="card-content black-text">
-				      <span class="card-title light-blue-text">Card Title</span>
-				      <p>I am a very simple card. I am good at containing small bits of information.
-				      I am convenient because I require little markup to use effectively.</p>
-				    </div>
-				    <div class="card-action">
-				      <a href="#">This is a link</a>
-				    </div>
-				  </div>
-				</div>
-				<div class="col s12 m6 l4">
-				  <div class="card samll white">
-				    <div class="card-content black-text">
-				      <span class="card-title light-blue-text">Card Title</span>
-				      <p>I am a very simple card. I am good at containing small bits of information.
-				      I am convenient because I require little markup to use effectively.</p>
-				    </div>
-				    <div class="card-action">
-				      <a href="#">This is a link</a>
-				    </div>
-				  </div>
-				</div>
-				<div class="col s12 m6 l4">
-				  <div class="card samll white">
-				    <div class="card-content black-text">
-				      <span class="card-title light-blue-text">Card Title</span>
-				      <p>I am a very simple card. I am good at containing small bits of information.
-				      I am convenient because I require little markup to use effectively.</p>
-				    </div>
-				    <div class="card-action">
-				      <a href="#">This is a link</a>
-				    </div>
-				  </div>
-				</div>
-			</div>
-
-			<div class="more-things"><!-- 更多文章按钮 -->
-				<a href="wordpress" title="" class="btn more-things">更多文章</a>
-			</div>
-		</div><!-- 文章列表结束 -->
+			</div><!-- 文章列表抬头开始 -->
+			<div class="row"><!-- 文章列表开始 -->
+				<?php
+				// Include WordPress
+				define('WP_USE_THEMES', false);
+				require('./article/wp-load.php');
+				query_posts('showposts=6');
+				// get_most_viewed("post",6);
+				?>
+				<?php while (have_posts()): the_post(); ?>
+					<div class="col s12 m6 l4">
+					  <div class="card small white hoverable">
+					    <div class="card-content black-text">
+					      <span class="card-title light-blue-text"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
+					      <p><?php the_content(); ?></p>
+					    </div>
+					    <div class="card-action">
+					      <a href="<?php the_permalink(); ?>">阅读全文</a>
+					    </div>
+					  </div>
+					</div>
+				<?php endwhile; ?>
+			</div><!-- 文章列表结束 -->
+			<div class="more-things"><!-- 更多文章按钮开始 -->
+				<a href="./article" title="" class="btn more-things">更多文章</a>
+			</div><!-- 更多文章按钮结束 -->
+		</div><!-- 文章区域结束 -->
 
 		<div id="files-list">
 			<div class="download">
@@ -197,7 +166,6 @@
 				<a href="" title="" class="btn more-things">更多资源</a>
 			</div>
 		</div>
-
 	</main>
 
 	<footer class="page-footer"><!-- 页脚开始 -->
@@ -205,28 +173,28 @@
 	    <div class="row">
 	      <div class="col l5 s12">
 	        <h5 class="white-text">WELCOME</h5>
-	        <p class="grey-text text-lighten-4">你是第1024位来这儿的胖友，超过了99%的人类！真腻害~</p>
+	        <p class="grey-text text-lighten-4">你是第<?php echo $num["id"]+1023; ?>位到这儿来的胖友，超过了99%的人类！真腻害~</p>
 	      </div>
 	      <div class="col l4 s12">
 	        <h5 class="white-text">友情链接</h5>
 	        <ul>
-	          <li><a class="grey-text text-lighten-3" href="#!">摩拜单车</a></li>
-	          <li><a class="grey-text text-lighten-3" href="#!">穷游旅行</a></li>
-	          <li><a class="grey-text text-lighten-3" href="#!">北京大学研招办</a></li>
-	          <li><a class="grey-text text-lighten-3" href="#!">北京化工大学研究生院</a></li>
+	          <li><a class="grey-text text-lighten-3" href="https://mobike.com/cn/">摩拜科技</a></li>
+	          <li><a class="grey-text text-lighten-3" href="http://www.qyer.com/">穷游网</a></li>
+	          <li><a class="grey-text text-lighten-3" href="http://grs.pku.edu.cn/ch/">北京大学研究生院</a></li>
+	          <li><a class="grey-text text-lighten-3" href="http://graduate.buct.edu.cn/">北京化工大学研究生院</a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </div>
 	  <div class="footer-copyright">
 	    <div class="container">
-	    © 2017 Uchihaty , Inc.
+	    © 2017 Liutianyi , Inc.
 	    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
 	    </div>
 	  </div>
 	</footer><!-- 页脚结束 -->
 
-	<a id="back_top" class="btn-floating btn-large  red hoverable">
+	<a id="back_top" class="btn-floating btn-large red hoverable">
 	<i class="material-icons">navigation</i>
 	</a>
 
