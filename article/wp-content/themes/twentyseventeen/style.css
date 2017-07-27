@@ -50,6 +50,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 1.0 Normalize
 Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
 --------------------------------------------------------------*/
+#back_top{
+	width: 80px;
+	height: 80px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
 
 html {
 	font-family: sans-serif;
@@ -987,7 +994,7 @@ input[type="checkbox"] + label {
 button,
 input[type="button"],
 input[type="submit"] {
-	background-color: #222;
+    background-color: #26a69a;
 	border: 0;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
@@ -1302,9 +1309,10 @@ a:hover .nav-title,
 --------------------------------------------------------------*/
 
 .navigation-top {
-	background: #fff;
-	border-bottom: 1px solid #eee;
-	border-top: 1px solid #eee;
+	/*background: #fff;*/
+	background-color: #ee6e73;
+	border-bottom: 1px solid #ee6e73;
+	border-top: 1px solid #ee6e73;
 	font-size: 16px;
 	font-size: 1rem;
 	position: relative;
@@ -1316,11 +1324,11 @@ a:hover .nav-title,
 }
 
 .navigation-top a {
-	color: #222;
+	color: #fff;
 	font-weight: 600;
 	-webkit-transition: color 0.2s;
 	transition: color 0.2s;
-}
+}/*修改*/
 
 .navigation-top .current-menu-item > a,
 .navigation-top .current_page_item > a {
@@ -1354,6 +1362,8 @@ a:hover .nav-title,
 .main-navigation > div > ul {
 	border-top: 1px solid #eee;
 	padding: 0.75em 1.695em;
+	background-color: #ee6e73;
+
 }
 
 .js .main-navigation.toggled-on > div > ul {
@@ -1402,7 +1412,7 @@ a:hover .nav-title,
 	border: 0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	color: #222;
+	color: #fff;
 	display: none;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -1902,7 +1912,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 }
 
 .entry-title a {
-	color: #333;
+	color: #039be5;
 	text-decoration: none;
 	margin-left: -2px;
 }
@@ -2067,6 +2077,11 @@ body:not(.twentyseventeen-front-page) .entry-header {
 	display: block;
 	margin-top: 1.5em;
 }
+.more-link{
+		color: #ffab40;
+
+}
+
 
 /* Single Post */
 
@@ -2154,7 +2169,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .entry-footer .edit-link a.post-edit-link {
-	background-color: #222;
+    background-color: #26a69a;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
 	-webkit-box-shadow: none;
@@ -2295,6 +2310,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 .site-footer .wrap {
 	padding-bottom: 1.5em;
 	padding-top: 2em;
+	background-color: #ee6e73;
 }
 
 /* Footer widgets */
@@ -2352,6 +2368,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 	font-size: 14px;
 	font-size: 0.875rem;
 	margin-bottom: 1em;
+	color: #fff;
 }
 
 .site-info a {
@@ -3385,6 +3402,8 @@ object {
 		right: 0;
 		width: 100%;
 		z-index: 3;
+		background-color: #ee6e73;
+		border: 0;
 	}
 
 	.navigation-top .wrap {
@@ -3405,6 +3424,7 @@ object {
 		top: 0;
 		width: 100%;
 		z-index: 7;
+		background-color: #ee6e73;
 	}
 
 	.admin-bar .site-navigation-fixed.navigation-top {
@@ -3937,7 +3957,8 @@ object {
 		font-size: 0.875rem;
 		line-height: 1.6;
 		margin-top: 3em;
-	}
+		background-color: #ee6e73;
+	}/*修改*/
 
 	.site-footer .widget-column.footer-widget-1 {
 		float: left;
@@ -3960,7 +3981,8 @@ object {
 		float: left;
 		padding: 0.7em 0 0;
 		width: 58%;
-	}
+		color: #fff;
+	}/*修改*/
 
 	.social-navigation + .site-info {
 		margin-left: 6%;

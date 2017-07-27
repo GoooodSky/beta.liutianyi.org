@@ -12,14 +12,27 @@
  * @version 1.0
  */
 
-?><!DOCTYPE html>
+?>
+<?php
+require_once("../conn/conn.php");
+date_default_timezone_set("Asia/Shanghai");
+
+	$db = "visitor";
+	mysql_select_db($db);
+	$ip = $_SERVER["REMOTE_ADDR"];
+	$date = date("Y.m.j");
+	$time = date("H:i:s");
+	$request = $_SERVER["HTTP_HOST"].$_SERVER["PHP_SELF"]."/".$_SERVER["QUERY_STRING"];
+	mysql_query("insert into history (ip,date,time,request) values ('$ip','$date','$time','$request')");
+?><!-- 保存访问信息，可复用 -->
+<!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <title>Someone Like You</title>
-<link rel="shortcut icon" type="image/x-icon"  href="../img/title.png">
+<link rel="shortcut icon" type="image/x-icon"  href="../img/logo.ico">
 
 <!-- <link rel="stylesheet" type="text/css" href="../../../../../../css/materialize.min.css"> -->
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
