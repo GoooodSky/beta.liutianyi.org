@@ -1,5 +1,5 @@
 <?php
-require_once("./conn/conn.php");
+require_once("../conn/conn.php");
 require_once("./tools/history.php");
 ?>
 <!DOCTYPE html><html lang="en">
