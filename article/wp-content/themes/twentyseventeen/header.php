@@ -14,7 +14,7 @@
 
 ?>
 <?php
-require_once("../conn/conn.php");
+require_once("../../conn/conn.php");
 require_once("../tools/history.php");
 ?><!-- 保存访问信息，可复用 -->
 <!DOCTYPE html>
