@@ -15,15 +15,7 @@
 ?>
 <?php
 require_once("../conn/conn.php");
-date_default_timezone_set("Asia/Shanghai");
-
-	$db = "visitor";
-	mysql_select_db($db);
-	$ip = $_SERVER["REMOTE_ADDR"];
-	$date = date("Y.m.j");
-	$time = date("H:i:s");
-	$request = $_SERVER["HTTP_HOST"].$_SERVER["PHP_SELF"]."/".$_SERVER["QUERY_STRING"];
-	mysql_query("insert into history (ip,date,time,request) values ('$ip','$date','$time','$request')");
+require_once("../tools/history.php");
 ?><!-- 保存访问信息，可复用 -->
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">

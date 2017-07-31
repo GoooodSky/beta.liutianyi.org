@@ -1,28 +1,6 @@
 <?php
 require_once("./conn/conn.php");
-date_default_timezone_set("Asia/Shanghai");
-
-	$db = "visitor";
-	mysql_select_db($db);
-	$ip = $_SERVER["REMOTE_ADDR"];
-	$date = date("Y.m.j");
-	$time = date("H:i:s");
-	$request = $_SERVER["HTTP_HOST"].$_SERVER["PHP_SELF"]."/".$_SERVER["QUERY_STRING"];
-	mysql_query("insert into history (ip,date,time,request) values ('$ip','$date','$time','$request')");
-?><!-- 保存访问信息，可复用 -->
-<?php
-	$sql = "select * from user where ip = '$ip'";
-	$query = mysql_query($sql);
-	$result = mysql_fetch_array($query);
-	if($result == true){
-        $query = mysql_query("select id from user where ip = '$ip'");
-        $num = mysql_fetch_array($query);
-    }
-	else{
-		mysql_query("insert into user (ip,date,time) values ('$ip','$date','$time')");
-		$query = mysql_query("select max(id) from user");
-		$num = mysql_fetch_array($query);
-	}
+require_once("./tools/history.php");
 ?>
 <!DOCTYPE html><html lang="en">
 <head>
