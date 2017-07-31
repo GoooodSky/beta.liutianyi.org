@@ -167,7 +167,8 @@ require_once("./tools/history.php");
 	  <div class="footer-copyright">
 	    <div class="container">
 	    © 2017 Liutianyi , Inc.
-	    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+	    <a class="grey-text text-lighten-4 right">今日访问量：<?php echo $freq; ?></a>
+
 	    </div>
 	  </div>
 	</footer><!-- 页脚结束 -->

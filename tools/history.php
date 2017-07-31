@@ -1,20 +1,101 @@
 <!-- 保存访问者信息 -->
 <?php
 date_default_timezone_set("Asia/Shanghai");
+// 获取系统信息
 function get_os() {
     if (!empty($_SERVER['HTTP_USER_AGENT'])) {
         $os = $_SERVER['HTTP_USER_AGENT'];
-        if (preg_match('/win/i', $os)) {
+        if (preg_match('/win/i', $os) && preg_match('/NT 5.1/i', $os)) {
+            $os = 'Windows XP';
+        } 
+        else if (preg_match('/win/i', $os) && preg_match('/NT 6.0/i', $os)) {
+            $os = 'Windows Vista';
+        } 
+        else if (preg_match('/win/i', $os) && preg_match('/NT 6.1/i', $os)) {
+            $os = 'Windows 7';
+        } 
+        else if (preg_match('/win/i', $os) && preg_match('/NT 6.2/i', $os)) {
+            $os = 'Windows 8';
+        } 
+        else if (preg_match('/win/i', $os) && preg_match('/NT 6.3/i', $os)) {
+            $os = 'Windows 8.1';
+        } 
+        else if (preg_match('/win/i', $os) && preg_match('/NT 6.4/i', $os)) {
+            $os = 'Windows 10';
+        } 
+        else if (preg_match('/win/i', $os) && preg_match('/NT 10.0/i', $os)) {
+            $os = 'Windows 10';
+        } 
+        else if (preg_match('/win/i', $os)) {
             $os = 'Windows';
-        } else if (preg_match('/mac/i', $os)) {
-            $os = 'MAC';
-        } else if (preg_match('/linux/i', $os)) {
+        } 
+        else if (preg_match('/Macintosh/i', $os) && preg_match('/10_9/i', $os)) {
+            $os = 'macOS 10.9';
+        } 
+        else if (preg_match('/Macintosh/i', $os) && preg_match('/10_10/i', $os)) {
+            $os = 'macOS 10.10';
+        } 
+        else if (preg_match('/Macintosh/i', $os) && preg_match('/10_11/i', $os)) {
+            $os = 'macOS 10.11';
+        } 
+        else if (preg_match('/Macintosh/i', $os) && preg_match('/10_12/i', $os)) {
+            $os = 'macOS 10.12';
+        } 
+        else if (preg_match('/Macintosh/i', $os)) {
+            $os = 'macOS';
+        } 
+        else if (preg_match('/iphone/i', $os) && preg_match('/7_/i', $os)) {
+            $os = 'iphone ios7';
+        } 
+        else if (preg_match('/iphone/i', $os) && preg_match('/8_/i', $os)) {
+            $os = 'iphone ios8';
+        } 
+        else if (preg_match('/iphone/i', $os) && preg_match('/9_/i', $os)) {
+            $os = 'iphone ios9';
+        } 
+        else if (preg_match('/iphone/i', $os) && preg_match('/10_/i', $os)) {
+            $os = 'iphone ios10';
+        } 
+        else if (preg_match('/iphone/i', $os) && preg_match('/11_/i', $os)) {
+            $os = 'iphone ios11';
+        } 
+        else if (preg_match('/iphone/i', $os)) {
+            $os = 'iphone ios6 or lower';
+        } 
+        else if (preg_match('/ipad/i', $os) && preg_match('/7_/i', $os)) {
+            $os = 'ipad ios7';
+        } 
+        else if (preg_match('/ipad/i', $os) && preg_match('/8_/i', $os)) {
+            $os = 'ipad ios8';
+        } 
+        else if (preg_match('/ipad/i', $os) && preg_match('/9_/i', $os)) {
+            $os = 'ipad ios9';
+        } 
+        else if (preg_match('/ipad/i', $os) && preg_match('/10_/i', $os)) {
+            $os = 'ipad ios10';
+        } 
+        else if (preg_match('/ipad/i', $os) && preg_match('/11_/i', $os)) {
+            $os = 'ipad ios11';
+        } 
+        else if (preg_match('/ipad/i', $os)) {
+            $os = 'ipad ios6 or lower';
+        } 
+        else if (preg_match('/like Mac/i', $os)) {
+            $os = 'ios device';
+        } 
+        else if (preg_match('/Windows Phone/i', $os)) {
+            $os = 'Windows Phone';
+        } 
+        else if (preg_match('/linux/i', $os)) {
             $os = 'Linux';
-        } else if (preg_match('/unix/i', $os)) {
+        } 
+        else if (preg_match('/unix/i', $os)) {
             $os = 'Unix';
-        } else if (preg_match('/bsd/i', $os)) {
+        } 
+        else if (preg_match('/bsd/i', $os)) {
             $os = 'BSD';
-        } else {
+        } 
+        else {
             $os = 'Other';
         }
         return $os;
@@ -22,6 +103,7 @@ function get_os() {
         return 'unknow';
     }
 }
+// 获取浏览器信息
 function browser_info() {
     if (!empty($_SERVER['HTTP_USER_AGENT'])) {
         $browser = $_SERVER['HTTP_USER_AGENT'];
@@ -43,6 +125,7 @@ function browser_info() {
         return 'unknow';
     }
 }
+// 获取真实IP
 function getRealIp()
 {
   $ip=false;
@@ -89,3 +172,12 @@ function getRealIp()
         $num = mysql_fetch_array($query);
     }
 ?>
+
+<!-- 判断今日访问量 -->
+<?php
+    $sql = "select * from history where date = '$date'";
+    $query = mysql_query($sql);
+    $freq = mysql_num_rows($query) + 1;  
+?>
+
+
