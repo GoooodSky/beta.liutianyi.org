@@ -1,8 +1,10 @@
 <?php
 require_once("../conn/conn.php");
-require_once("./tools/history.php");
+require_once("./tools/request_history.php");
+require_once("./tools/file_list.php");
 ?>
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name=viewport content=" width = device-width" initial-scale="1" >
@@ -12,7 +14,7 @@ require_once("./tools/history.php");
 	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
     <ul id="slide-out" class="side-nav fixed"><!-- 侧边栏开始 -->
@@ -125,23 +127,47 @@ require_once("./tools/history.php");
 					不定期更新各种热门资源
 				</p>
 			</div>
-			<div class="collection">
+<!-- 			<div class="collection">
 			  <a href="#!" class="collection-item">20170618 hosts文件
 				  <span class="new badge" data-badge-caption="次下载">
 				  4
 				  </span>
 				</a>
 			  <a href="#!" class="collection-item">Your Name.2016.HDrip.1080P AAC x264.mp4
-				  <span class="new badge" data-badge-caption="次下载">
-				  3
-				  </span>
+				  <span class="new badge" data-badge-caption="次下载">3</span>
 			  </a>
 			  <a href="#!" class="collection-item">你的名字。.mkv</a>
 			  <a href="#!" class="collection-item">American.Genius.S01E01.Jobs.vs.Gates.720p.HDTV.x264-DHD</a>
-			</div>
+			</div> -->
+
+
+			<ul class="collapsible popout" data-collapsible="expandable">
+				 <?php for ($i = 0; $i < 4 ; $i++ , $filelist = mysql_fetch_assoc($query_filelist)):?> 
+					  <li>
+					    <div class="collapsible-header waves-effect waves-teal">
+						    <!-- <i class="material-icons">filter_drama</i> -->
+						    <span class="filename"><?php echo "$filelist[name]"; ?></span>
+						    <!-- <span class="new badge" data-badge-caption="次下载">3</span> -->
+					    </div>
+					    <div class="collapsible-body">
+						    <div class="filedetail">描述：<?php echo "$filelist[detail]"; ?></div>
+							<hr>
+							<div class="fileother">
+								<div class="filetype">分类：<span class="chip"><?php echo "$filelist[type]"; ?></span></div>
+							    <div class="filedate">上传日期：<?php echo "$filelist[date]"; ?></div>
+							    <div class="filedate">下载量：<?php echo "$filelist[download]"; ?>次</div>
+							    <div class="filesrc">下载源：<?php echo "$filelist[source]"; ?></div>
+						    </div>
+						    <a href="<?php echo "$filelist[address]"; ?>" class="btn-floating  hoverable red"><i class="material-icons">arrow_downward</i></a>
+					    </div>
+					  </li>
+				<?php endfor; ?> 
+			</ul>
+
+
 
 			<div class="more-things">
-				<a href="" title="" class="btn more-things">更多资源</a>
+				<a href="#" class="btn more-things">更多资源</a>
 			</div>
 		</div>
 	</main>
@@ -173,7 +199,7 @@ require_once("./tools/history.php");
 	  </div>
 	</footer><!-- 页脚结束 -->
 
-	<a id="back_top" class="btn-floating btn-large red hoverable">
+	<a id="back_top" class="btn-floating btn-large red hoverable  waves-effect">
 	<i class="material-icons">navigation</i>
 	</a>
 
