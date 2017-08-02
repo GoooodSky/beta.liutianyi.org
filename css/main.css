@@ -82,3 +82,33 @@ margin: 0 auto;
 .download{
 	padding: 0px;
 }
+.collapsible-header:hover{
+	background-color: #ddd;
+}
+.collapsible-header span{
+	color: #26a69a;
+}
+.collapsible span.badge {
+    margin-top: 0;
+}
+div.filedetail{
+	color: #ee6e73;
+}
+div.fileother div{
+	color: #039be5;
+	margin-bottom: 15px;
+}
+.collapsible-body{
+	/*background-color: #ccc;*/
+}
+ 
+
+
+
+
+
+
+
+
+
+
