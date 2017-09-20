@@ -29,16 +29,16 @@
             else if (preg_match('/win/i', $os)) {
                 $os = 'Windows';
             } 
-            else if (preg_match('/Macintosh/i', $os) && preg_match('/10_9/i', $os)) {
+            else if (preg_match('/Macintosh/i', $os) && preg_match('/10[_.]9/i', $os)) {
                 $os = 'macOS 10.9';
             } 
-            else if (preg_match('/Macintosh/i', $os) && preg_match('/10_10/i', $os)) {
+            else if (preg_match('/Macintosh/i', $os) && preg_match('/10[_.]10/i', $os)) {
                 $os = 'macOS 10.10';
             } 
-            else if (preg_match('/Macintosh/i', $os) && preg_match('/10_11/i', $os)) {
+            else if (preg_match('/Macintosh/i', $os) && preg_match('/10[_.]11/i', $os)) {
                 $os = 'macOS 10.11';
             } 
-            else if (preg_match('/Macintosh/i', $os) && preg_match('/10_12/i', $os)) {
+            else if (preg_match('/Macintosh/i', $os) && preg_match('/10[_.]12/i', $os)) {
                 $os = 'macOS 10.12';
             } 
             else if (preg_match('/Macintosh/i', $os)) {
@@ -125,24 +125,6 @@
             return 'unknow';
         }
     }
-    // 获取真实IP
-    // function get_ip(){
-    //       $ip=false;
-    //       if(!empty($_SERVER["HTTP_CLIENT_IP"])){
-    //         $ip = $_SERVER["HTTP_CLIENT_IP"];
-    //       }
-    //       if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-    //         $ips = explode (", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
-    //         if ($ip) { array_unshift($ips, $ip); $ip = FALSE; }
-    //         for ($i = 0; $i < count($ips); $i++) {
-    //           if (!eregi ("^(10│172.16│192.168).", $ips[$i])) {
-    //             $ip = $ips[$i];
-    //             break;
-    //           }
-    //         }
-    //       }
-    //       return ($ip ? $ip : $_SERVER['REMOTE_ADDR']);
-    // }
 
     $db = "liutianyi";
     mysql_select_db($db);
