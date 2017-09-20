@@ -126,27 +126,27 @@
         }
     }
     // 获取真实IP
-    function get_ip(){
-          $ip=false;
-          if(!empty($_SERVER["HTTP_CLIENT_IP"])){
-            $ip = $_SERVER["HTTP_CLIENT_IP"];
-          }
-          if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-            $ips = explode (", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
-            if ($ip) { array_unshift($ips, $ip); $ip = FALSE; }
-            for ($i = 0; $i < count($ips); $i++) {
-              if (!eregi ("^(10│172.16│192.168).", $ips[$i])) {
-                $ip = $ips[$i];
-                break;
-              }
-            }
-          }
-          return ($ip ? $ip : $_SERVER['REMOTE_ADDR']);
-    }
+    // function get_ip(){
+    //       $ip=false;
+    //       if(!empty($_SERVER["HTTP_CLIENT_IP"])){
+    //         $ip = $_SERVER["HTTP_CLIENT_IP"];
+    //       }
+    //       if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    //         $ips = explode (", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
+    //         if ($ip) { array_unshift($ips, $ip); $ip = FALSE; }
+    //         for ($i = 0; $i < count($ips); $i++) {
+    //           if (!eregi ("^(10│172.16│192.168).", $ips[$i])) {
+    //             $ip = $ips[$i];
+    //             break;
+    //           }
+    //         }
+    //       }
+    //       return ($ip ? $ip : $_SERVER['REMOTE_ADDR']);
+    // }
 
     $db = "liutianyi";
     mysql_select_db($db);
-    $ip = get_ip();
+    $ip = $_SERVER['REMOTE_ADDR'];
     $date = date("Y.m.j");
     $time = date("H:i:s");
     $request = $_SERVER["HTTP_HOST"].$_SERVER["PHP_SELF"]."/".$_SERVER["QUERY_STRING"];
