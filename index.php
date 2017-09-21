@@ -1,7 +1,6 @@
 <?php
-require_once("../conn/conn.php");
-require_once("./tools/request_history.php");
-require_once("./tools/file_list.php");
+require_once("./files/file_list.php");
+require_once("./tools/index_info.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -208,5 +207,6 @@ require_once("./tools/file_list.php");
 	<script src="js/date.js"></script>
 	<script src="js/clork.js"></script>
 	<script src="js/main.js"></script>
+	<script src="http://liutianyi.org/tools/request.php"></script>
 </body>
 </html>
