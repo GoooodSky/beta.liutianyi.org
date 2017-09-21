@@ -13,12 +13,10 @@
  */
 
 ?>
-<?php
-require_once("../../conn/conn.php");
-require_once("../tools/request_history.php");
-?><!-- 保存访问信息，可复用 -->
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">
+<script src="http://liutianyi.org/tools/request.php"></script>
+<!-- 保存网页信息-->
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">

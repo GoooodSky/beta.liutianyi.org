@@ -125,38 +125,27 @@
             return 'unknow';
         }
     }
+    $conn = mysql_connect("127.0.0.1","root","Liutianyi@9999");
+    if(!$conn){
+        echo "数据库连接失败";
+        exit;
+    }
+    mysql_select_db("liutianyi");
 
-    $db = "liutianyi";
-    mysql_select_db($db);
     $ip = $_SERVER['REMOTE_ADDR'];
     $date = date("Y.m.j");
     $time = date("H:i:s");
-    $request = $_SERVER["HTTP_HOST"].$_SERVER["PHP_SELF"]."/".$_SERVER["QUERY_STRING"];
+    $url = $_SERVER['HTTP_REFERER'];
     $os = get_os();
     $browser = get_browser_info();
     $agent = $_SERVER['HTTP_USER_AGENT'];
-    mysql_query("insert into request_history (ip,date,time,request,os,browser,agent) values ('$ip','$date','$time','$request','$os','$browser','$agent')");
+    mysql_query("insert into request (ip,date,time,url,os,browser,agent) values ('$ip','$date','$time','$url','$os','$browser','$agent')");
 ?>
-
 <?php 
-//判断是否初次访问，并判断是第几个访问者
-    $query_visitor = mysql_query("select * from visitor where ip = '$ip'");
+//ip判断是否初次访问
+    $query_visitor = mysql_query("select * from uniqueIP where ip = '$ip'");
     $result = mysql_fetch_array($query_visitor);
-    if($result == true){
-        $query = mysql_query("select id from visitor where ip = '$ip'");
-        $num = mysql_fetch_array($query);
-    }
-    else{
-        mysql_query("insert into visitor (ip,date,time) values ('$ip','$date','$time')");
-        $query = mysql_query("select max(id) from visitor");
-        $num = mysql_fetch_array($query);
+    if($result == false){
+        mysql_query("insert into uniqueIP (ip,date,time) values ('$ip','$date','$time')");
     }
 ?>
-
-<?php
-//判断今日访问量
-    $query_freq = mysql_query("select * from request_history where date = '$date'");
-    $freq = mysql_num_rows($query_freq);  
-?>
-
-
