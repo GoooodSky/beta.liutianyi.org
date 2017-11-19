@@ -1,5 +1,5 @@
 ***Beta version***
 
-This project is for liutianyi.org — My personal website page.
+This project is for liutianyi.org、.
 
-Please just use for study.
+Please just use for study propose.

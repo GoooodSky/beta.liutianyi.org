@@ -1,7 +1,6 @@
 header, main, footer {
       padding-left: 300px;
     }
-
 @media only screen and (max-width : 992px) {
   header, main, footer {
     padding-left: 0;
@@ -9,12 +8,12 @@ header, main, footer {
 }
           
 #main_banner{
-background: #444 url(../img/bannner01.jpg);
+/*background: #444 url(../img/bannner01.jpg);*/
 background-attachment: fixed;
 background-size: cover;
 overflow: hidden;
 width: 100%;
-height: 9/16 * width;
+/*height: 9/16 * width;*/
 }
 
 #clork{
@@ -37,7 +36,7 @@ margin: 0 auto;
 .side-nav-content p{
 	text-align: center;
 	font-size: 13px;
-	letter-spacing: 1.5px;
+	letter-spacing: 2px;
 	line-height: 25px;
 	margin-top: 10px;
 }
@@ -80,7 +79,7 @@ margin: 0 auto;
 	margin-bottom: 10px;
 }
 .download{
-	padding: 0px;
+	padding: 0;
 }
 .collapsible-header:hover{
 	background-color: #ddd;

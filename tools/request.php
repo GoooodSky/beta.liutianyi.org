@@ -125,12 +125,12 @@
             return 'unknow';
         }
     }
-    $conn = mysql_connect("127.0.0.1","root","Liutianyi@9999");
+    $conn = mysqli_connect("127.0.0.1","root","Liutianyi@9999");
     if(!$conn){
         echo "数据库连接失败";
         exit;
     }
-    mysql_select_db("liutianyi");
+    mysqli_select_db($conn, "liutianyi");
 
     $ip = $_SERVER['REMOTE_ADDR'];
     $date = date("Y.m.j");
@@ -139,13 +139,13 @@
     $os = get_os();
     $browser = get_browser_info();
     $agent = $_SERVER['HTTP_USER_AGENT'];
-    mysql_query("insert into request (ip,date,time,url,os,browser,agent) values ('$ip','$date','$time','$url','$os','$browser','$agent')");
+    mysqli_query($conn, "insert into request (ip,date,time,url,os,browser,agent) values ('$ip','$date','$time','$url','$os','$browser','$agent')");
 ?>
 <?php 
 //ip判断是否初次访问
-    $query_visitor = mysql_query("select * from uniqueIP where ip = '$ip'");
-    $result = mysql_fetch_array($query_visitor);
+    $query_visitor = mysqli_query($conn, "select * from uniqueIP where ip = '$ip'");
+    $result = mysqli_fetch_array($query_visitor);
     if($result == false){
-        mysql_query("insert into uniqueIP (ip,date,time) values ('$ip','$date','$time')");
+        mysqli_query($conn, "insert into uniqueIP (ip,date,time) values ('$ip','$date','$time')");
     }
 ?>
