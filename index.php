@@ -10,8 +10,8 @@ require_once("./tools/index_info.php");
 	<title>Someone Like You</title>
 	<link rel="shortcut icon" type="image/x-icon"  href="img/logo.ico">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
@@ -126,22 +126,8 @@ require_once("./tools/index_info.php");
 					不定期更新各种热门资源
 				</p>
 			</div>
-<!-- 			<div class="collection">
-			  <a href="#!" class="collection-item">20170618 hosts文件
-				  <span class="new badge" data-badge-caption="次下载">
-				  4
-				  </span>
-				</a>
-			  <a href="#!" class="collection-item">Your Name.2016.HDrip.1080P AAC x264.mp4
-				  <span class="new badge" data-badge-caption="次下载">3</span>
-			  </a>
-			  <a href="#!" class="collection-item">你的名字。.mkv</a>
-			  <a href="#!" class="collection-item">American.Genius.S01E01.Jobs.vs.Gates.720p.HDTV.x264-DHD</a>
-			</div> -->
-
-
 			<ul class="collapsible popout" data-collapsible="expandable">
-				 <?php for ($i = 0; $i < 4 ; $i++ , $filelist = mysql_fetch_assoc($query_filelist)):?> 
+				<?php for ($i = 0; $i < 4 ; $i++ , $filelist = mysqli_fetch_assoc($query_filelist)):?> 
 					  <li>
 					    <div class="collapsible-header waves-effect waves-teal">
 						    <!-- <i class="material-icons">filter_drama</i> -->
@@ -162,8 +148,6 @@ require_once("./tools/index_info.php");
 					  </li>
 				<?php endfor; ?> 
 			</ul>
-
-
 
 			<div class="more-things">
 				<a href="#" class="btn more-things">更多资源</a>
