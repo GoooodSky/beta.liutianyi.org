@@ -1,9 +1,5 @@
-<?php
-require_once("./files/file_list.php");
-require_once("./tools/index_info.php");
-?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="UTF-8">
 	<meta name=viewport content=" width = device-width" initial-scale="1" >
@@ -13,6 +9,7 @@ require_once("./tools/index_info.php");
 	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
@@ -117,42 +114,6 @@ require_once("./tools/index_info.php");
 				<a href="./article" title="" class="btn more-things">更多文章</a>
 			</div><!-- 更多文章按钮结束 -->
 		</div><!-- 文章区域结束 -->
-
-		<div id="files-list">
-			<div class="download">
-				<h3>热门资源</h3>
-				<hr>
-				<p>
-					不定期更新各种热门资源
-				</p>
-			</div>
-			<ul class="collapsible popout" data-collapsible="expandable">
-				<?php for ($i = 0; $i < 4 ; $i++ , $filelist = mysqli_fetch_assoc($query_filelist)):?> 
-					  <li>
-					    <div class="collapsible-header waves-effect waves-teal">
-						    <!-- <i class="material-icons">filter_drama</i> -->
-						    <span class="filename"><?php echo "$filelist[name]"; ?></span>
-						    <!-- <span class="new badge" data-badge-caption="次下载">3</span> -->
-					    </div>
-					    <div class="collapsible-body">
-						    <div class="filedetail">描述：<?php echo "$filelist[detail]"; ?></div>
-							<hr>
-							<div class="fileother">
-								<div class="filetype">分类：<span class="chip"><?php echo "$filelist[type]"; ?></span></div>
-							    <div class="filedate">上传日期：<?php echo "$filelist[date]"; ?></div>
-							    <div class="filedate">下载量：<?php echo "$filelist[download]"; ?>次</div>
-							    <div class="filesrc">下载源：<?php echo "$filelist[source]"; ?></div>
-						    </div>
-						    <a href="<?php echo "$filelist[address]"; ?>" class="btn-floating  hoverable red"><i class="material-icons">arrow_downward</i></a>
-					    </div>
-					  </li>
-				<?php endfor; ?> 
-			</ul>
-
-			<div class="more-things">
-				<a href="#" class="btn more-things">更多资源</a>
-			</div>
-		</div>
 	</main>
 
 	<footer class="page-footer"><!-- 页脚开始 -->
@@ -185,12 +146,16 @@ require_once("./tools/index_info.php");
 	<a id="back_top" class="btn-floating btn-large red hoverable  waves-effect">
 	<i class="material-icons">navigation</i>
 	</a>
-
+	<!-- 以下是必要框架 -->
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/materialize.min.js"></script>
+	<!-- 以下是自定义js -->
 	<script src="js/date.js"></script>
 	<script src="js/clork.js"></script>
 	<script src="js/main.js"></script>
-	<script src="http://liutianyi.org/tools/request.php"></script>
+	<!-- 以下是Vue文件，切勿颠倒顺序 -->
+	<script src="js/vue.min.js"></script>
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	<script src="js/vue-app.js"></script>
 </body>
 </html>
